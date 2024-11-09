@@ -23,7 +23,7 @@ export default function Destinations() {
 
           {/* Destination Card 3 */}
           <div className="card">
-            <Image  src="/maldives.png "height={100} width={100}  alt="Maldives" />
+            <Image  src="/maldivs.jpg"height={100} width={100}  alt="Maldives" />
             <h2>Maldives</h2>
             <p>Relax on the beaches and experience the crystal clear waters of the Maldives.</p>
           </div>
