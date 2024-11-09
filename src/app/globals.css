@@ -2,20 +2,342 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+
+ /* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Body styling */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Container class */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Header styling */
+header {
+  background-color: #505050;
+  padding: 20px 0;
+  color: white;
+}
+
+header h1 {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 20px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #ff6347;
+}
+
+
+
+.hero {
+  
+  color: rgb(147, 32, 32);
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.5rem;
+}
+
+.hero button {
+  background-color: #ff6347;
+  border: none;
+  padding: 15px 30px;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.hero button:hover {
+  background-color: #e55347;
+}
+
+/* Destinations Section Styles */
+.destinations {
+  padding: 60px 0;
+  background-color: #f5f5f5;
+}
+
+.destinations h1 {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 40px;
+}
+
+.destinations .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.destinations .card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.destinations .card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.destinations .card h2 {
+  font-size: 1.5rem;
+  color: #333;
+  padding: 20px;
+}
+
+.destinations .card p {
+  color: #666;
+  padding: 0 20px 20px;
+}
+
+.destinations .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.destinations .card:hover img {
+  filter: brightness(0.8);
+}
+
+/* styles/globals.css */
+
+.about-section {
+  padding: 4rem 2rem;
+  background-color: #f4f4f8; /* Light background color for the section */
+  display: flex;
+  justify-content: center;
+}
+
+.about-content {
+  max-width: 800px;
+  text-align: center;
+  color: #333;
+}
+
+.about-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #2c3e50; /* Heading color */
+}
+
+.about-content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+
+
+/* styles/globals.css */
+
+.booking-form {
+  max-width: 500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.booking-form h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.booking-form label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  color: #555;
+}
+
+.booking-form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.booking-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #ac6942;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.booking-form button:hover {
+  background-color: #976f61;
+}
+
+
+/* styles/globals.css */
+
+.contact-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 4rem 2rem;
+  background-color: #f3f4f6;
+  color: #333;
+}
+
+.contact-info {
+  max-width: 300px;
+}
+
+.contact-info h2 {
+  font-size: 2.5rem;
+  color: #d57362;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  margin: 0.5rem 0;
+  color: #666;
+}
+
+.contact-form {
+  max-width: 500px;
+  width: 100%;
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.contact-form label {
+  display: block;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem;
+  color: #555;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #d96060;
+  box-shadow: 0 0 8px rgba(248, 151, 71, 0.3);
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #d6683d;
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #df7736;
+}
+
+
+
+/* Footer Styling */
+footer {
+  background-color: #575757;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  header nav {
+    flex-direction: column;
+  }
+  
+  header nav a {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.2rem;
+  }
+
+  .about-content h2,
+  .destinations h1,
+  .contact-info h2 {
+    font-size: 2rem;
+  }
+
+  .booking-form,
+  .contact-form {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+  
+  .contact-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
 }
